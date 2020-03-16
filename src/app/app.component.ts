@@ -1,16 +1,20 @@
 import { Component, OnInit } from "@angular/core";
-import { WeatherService } from "./services/weather.service";
+import { DeimosService } from "./services/deimos.service";
 
 @Component({
   selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  templateUrl: "./app.component.html"
 })
 export class AppComponent implements OnInit {
-  constructor(private weatherService: WeatherService) { }
+  dataDeimos;
+
+  constructor(private deimosService: DeimosService) {}
   ngOnInit() {
-    this.weatherService.getWeather("London", "uk").subscribe(
-      res => console.log(res),
+    this.deimosService.getDeimosData().subscribe(
+      res => {
+        console.log(res);
+        this.dataDeimos = res;
+      },
       err => console.log(err)
     );
   }
