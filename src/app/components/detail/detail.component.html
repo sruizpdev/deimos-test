@@ -1,0 +1,27 @@
+<div class="container"> 
+    <div *ngIf="dataDeimos" class="row">
+
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Profile</th>
+              <th scope="col">Shift</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of dataDeimos; index as i" >
+              <th scope="row">{{i}}</th>
+              <td>{{item.name}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.profile}}</td>
+              <td>{{item.shift}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DeimosService {
 
-  URI = 'https://jsonplaceholder.typicode.com/users';
+  URI = 'https://38f3f7db-5295-4c4f-a1e0-812bce1bd30d.mock.pstmn.io/api/v1/users';
   apiKey = '7623fcf6c90f00b8b38b0d9a0825846b';
 
   constructor(private http: HttpClient) {
